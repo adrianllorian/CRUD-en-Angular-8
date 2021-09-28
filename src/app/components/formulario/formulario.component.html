@@ -1,0 +1,53 @@
+<div class="container">
+ 
+<div class="row">
+    <div class="col-12">
+
+    <form class="bg-dark p-3" >
+        <div class="form-group row pt-2 pb-2">
+            <div class="col-12">
+            <a  class="text-light">Crear Usuario</a>
+            <hr>
+            </div>
+        </div>
+        
+        <div class="form-group " style="display: none">
+            <label class="text-light">Id</label>
+            <input [(ngModel)]="usuario.id"  type="number" name="id" class="form-control text-muted">
+            
+        </div>
+        <div class="form-group row">
+           <div class="col-3"><label class="text-light">Nombre</label></div> 
+           <div class="col-9"> <input [(ngModel)]="usuario.nombre" type="text" name="nombre" class="form-control text-muted"></div>
+            
+        </div>
+        <div class="form-group row">
+           <div class="col-3"> <label class="text-light">Apellido</label></div>
+            <div class="col-9"><input [(ngModel)]="usuario.apellido"  type="text" name="apellido" class="form-control text-muted"></div>
+            
+        </div>
+        <div class="form-group row">
+           <div class="col-3"> <label class="text-light">Email</label></div>
+           <div class="col-9"> <input [(ngModel)]="usuario.email" type="text" name="email" class="form-control text-muted"></div>
+            
+        </div>
+
+        <div class="form-group row">
+            <div class="col-12">
+                <button class="btn btn-primary" routerLink="/lista" type="button" (click)="add(usuario)">{{ botonSubmit }}</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+</div>
+
+
+
+
+<div class="row mt-5">
+
+<button class="btn btn-success" routerLink="/">Volver a la lista</button>
+</div>
+</div>

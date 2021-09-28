@@ -1,0 +1,47 @@
+<div class="container border border border-primary">
+    <div class="row">
+<div class="col-12 bg-light pt-3 pb-3">
+    <a class="text-secondary">Clientes</a>
+</div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h4 class="text-primary pt-3">Lista Ususarios</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 mb-2">
+        <button class="btn btn-primary" routerLink="/formulario">Crear Cliente</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class=" table table-striped table-bordered text-primary">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Borrar</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let us of usuario">
+                    <td>{{us.id}}</td>
+                    <td>{{us.nombre}}</td>
+                    <td>{{us.apellido}}</td>
+                    <td>{{us.email}}</td>
+                    <td><button class="btn btn-danger" (click)="delete(us.id)">Eliminar</button></td>
+                    <td><button class="btn btn-warning" (click)="update(us.id)" routerLink="/formulario">Editar</button></td>
+                </tr>
+            </tbody>
+            </table>
+            <a>{{envio}}</a>
+        </div>
+    </div>
+    
+</div>
